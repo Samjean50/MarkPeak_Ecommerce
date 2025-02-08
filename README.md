@@ -4,7 +4,7 @@
 
 ### Project Instructions:
 
-In this project i will be developing an e-commerce website for a new online marketplace named "MarketPeak." This platform will feauture product listings, a shopping cart and user authemntication. To carry out this project, i will utilize Git for version control, develop the wensite in a Linux environment, and deploy it on on AWS instance.
+In this project i will be developing an e-commerce website for a new online marketplace named "MarketPeak." This platform will feauture product listings, a shopping cart and user authemntication. To carry out this project, i will utilize Git for version control, develop the website in a Linux environment, and deploy it on on AWS instance.
 
 #### Tasks 1: Implement Version Control with Git
 #### Implement Version Control with Git
@@ -12,10 +12,10 @@ In this project i will be developing an e-commerce website for a new online mark
 #### 1.1. Initialize Git Repository:
 I created the project directory and named it "MarkPeak_Ecommerce. then cd into the new project directory and ran the **git init** command to make it a git repository.
 
-Note: I used the terminal on my MAC OS to execute this commands.
+Note: I used the terminal on my MAC-OS to execute these commands.
 
 #### 1.2. Obtain and Prepare the E-Commerce Website Template:
- I downloaded a pre- existing e-commerce website template as i dont have to develop the website code.
+ I downloaded a pre-existing e-commerce website template as i dont have to develop the website code.
 
 * To download a Website Template: 
  I visited (Tooplate)[https://www.tooplate.com/] or any other free template resource, and download a suitable e-commerce website template. 
