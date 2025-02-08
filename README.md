@@ -4,7 +4,7 @@
 
 ### Project Instructions:
 
-In this project i will be developing an e-commerce website for a new online marketplace named "MarketPeak." This platform will feauture product listings, a shopping cart and user authemntication. To carry out this project, i will utilize Git for version control, develop the website in a Linux environment, and deploy it on on AWS instance.
+In this project i will be developing an e-commerce website for a new online marketplace named "MarketPeak." This platform will feature product listings, a shopping cart and user authentication. To carry out this project, i will utilize Git for version control, develop the website in a Linux environment, and deploy it on on AWS instance.
 
 #### Tasks 1: Implement Version Control with Git
 #### Implement Version Control with Git
