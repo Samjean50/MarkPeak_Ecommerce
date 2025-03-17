@@ -19,8 +19,7 @@ Note: I used the terminal on my MAC-OS to execute these commands.
 
 * To download a Website Template: 
  I visited (Tooplate)[https://www.tooplate.com/] or any other free template resource, and download a suitable e-commerce website template. 
- [Waso strategy template]: https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/dowload-the%20template.png 
-
+![Waso Strategy](https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/dowload-the%20template.png)
 
 * Prepare the Website Template:
  I extracted the downloaded template into your project directory, MarketPeak_Ecommerce.
@@ -132,7 +131,8 @@ Reload httpd: Applied the changes by reloading the httpd service.
 With httpd configured and website files in place, MarketPeak Ecommerce platform is now live on the internet: Open a web browser and access the public IP (http://52.207.115.56/) of your EC2 instance to view the deployed website.
 
 Note: When i initially created my security group, i didnt open my port 80 so the website didnt load/respond at first when i used the public IP address of the instance. Then i realized my mistake and i went to edit the inbound rules of my security group and opened port 80 then the website responded using the same public IP adddress of my instance. 
-[MarkPeakerce-website]: https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/final-site.png
+![Final site](https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/final-site.png)
+
 
 #### Tasks 3: Continuous Integration and Deployment Workflow
 To ensure a smooth workflow for developing, testing, and deploying my e-commerce platform, i follow this structured approach. It covers making changes in a development environment, utilizing version control with Git, and deploying updates to your production server on AWS.
@@ -164,21 +164,21 @@ ran the the following git command to stage, commit, and push to development bran
 Pull Requests and Merging to the Main branch
 
 * Create a Pull Request (PR): On GitHub, i created a pull request to merge the development branch into the main branch. This process is crucial for code review and maintaining code quality.
-[pull-request]: https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/pull-request.png
+![pull-request](https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/pull-request.png)
 
 * Review and Merge the PR: Reviewed the changes for any potential issues. Once satisfied,i merged the pull request into the main branch, incorporating the new features or fixes into the production codebase.
 [githubmerge]: https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/github-merge.png
 
 **git checkout main**
 **git merge development**
-[gitmerge]: https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/git-merge.png
+![gitmerge] (https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/git-merge.png)
 
 * Push the Merged Changes to GitHub: Ensure that your local main branch, now containing the updates, is pushed to the remote repository on GitHub.
 
 **git pull**
 **git push origin main**
 
-[syncing]: https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/synching-local-and-remote-main.png
+![syncing] (https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/synching-local-and-remote-main.png)
 
 #### Step 4: Deploying Updates to the Production Server
 |* Pull the Latest Changes on the Server: SSH into your AWS EC2 instance where the production website is hosted. I navigated to the website's directory and pull the latest changes from the main branch using the command below.
