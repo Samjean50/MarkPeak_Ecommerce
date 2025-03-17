@@ -30,13 +30,15 @@ Note: I used the terminal on my MAC-OS to execute these commands.
 
 I carried out the folowing actions
 
-**git config --global user.name**
+```
+git config --global user.name
 
-**git config --global user.email**
+git config --global user.email
 
-**git commit -m "Initial commit with basic e-commerce site structure"**
+git commit -m "Initial commit with basic e-commerce site structure"
+```
 
-Note : I set the Git global configuration of my username and email using the above commands and committed my changes with a clear descriptive message. Then  i added the website files to the Git repository using the **git add .** command.
+Note : I set the Git global configuration of my username and email using the above commands and committed my changes with a clear descriptive message. Then  i added the website files to the Git repository using the ```git add``` command.
 
 #### 1.4. Push the code to your Github repository
 
@@ -54,7 +56,7 @@ In my terminal, the project directory, i added the remote repository URL to my l
 * Push your code to GitHub repository: 
 I pushed using the following command:
 
-**git push -u origin main**
+```git push -u origin main```
 code-pushed
 
 #### Tasks 2: AWS Deployment
@@ -77,7 +79,7 @@ On my EC2 instance, i generated a SSH keypair using **ssh-keygen**
 
 * cat and copy the public key.
 
-**cat /home/ec2-user/.ssh/id_rsa.pub
+```cat /home/ec2-user/.ssh/id_rsa.pub```
 sshkey-copied**
 
 * Added ssh public key to GitHub repository:
@@ -86,7 +88,7 @@ I created a ssh key in my github repository
 
 ssh-link
 
-**git clone git@github.com:Samjean50/MarketPeak_Ecommerce.git** 
+```git clone git@github.com:Samjean50/MarketPeak_Ecommerce.git```
 
 * Authenticating with GitHub using HTTPS
 
@@ -98,7 +100,7 @@ git clone https://github.com/Samjean50/MarketPeak_Ecommerce.git
 
 Note: With Amazon Linux, git is not preinistalled so I had to manually install it manually, using the following command:
 
-**sudo yum install git**
+```sudo yum install git```
 
 #### 2.3. Installing a Web Server on EC2
 
@@ -107,24 +109,28 @@ Apache HTTP Server (httpd) is a widely used web server that serves HTML files an
 * Install Apache web server on the EC2 instance: 
 
 I used the following command to install Apache:
-**sudo yum update -y**
+```
+sudo yum update -y
 
-**sudo yum install httpd -y**
+sudo yum install httpd -y
 
-**sudo systemctl start httpd**
+sudo systemctl start httpd
 
-**sudo systemctl enable httpd**
+sudo systemctl enable httpd
+```
 
 #### 2.4. Configure httpd for Website:
 
 Prepare the Web Directory: I cleared the default httpd web directory and copied MarketPeak Ecommerce website files to it.
 
-**sudo rm -rf /var/www/html/***  # Delete the default
+```
+sudo rm -rf /var/www/html/***  # Delete the default
 
-**sudo cp -r ~/MarketPeak_Ecommerce/2130_waso_strategy/*** /var/www/html/ # copy the content of MarketPeak_Ecommerce cloned earlier
+sudo cp -r ~/MarketPeak_Ecommerce/2130_waso_strategy/*** /var/www/html/ # copy the content of MarketPeak_Ecommerce cloned earlier
+```
 
 Reload httpd: Applied the changes by reloading the httpd service.
-**sudo systemctl reload httpd**
+```sudo systemctl reload httpd```
 
 
 #### 2.5.  Access Website from Browser 
@@ -142,9 +148,10 @@ Developing New Features and Fixes
 
 * Created a Development Branch: I created a separate branch using the commands below. This isolates new features and bug fixes from the stable version of your website. 
 
-**git branch development**
-**git checkout development**
-**development-branch**
+```git branch development
+git checkout development
+```
+development-branch
 
 * Implement Changes: On the development branch, i added new features or bug fixes. I only created a new file on the development branch
 
@@ -153,11 +160,13 @@ Version control with Git
 
 ran the the following git command to stage, commit, and push to development branch:
 
-**git add .**
+```
+git add .
 
-**git commit -m "Add new features or fix bugs"**
+git commit -m "Add new features or fix bugs"
 
-**git push origin development**
+git push origin development
+```
 
 
 #### Step 3:
@@ -169,24 +178,27 @@ Pull Requests and Merging to the Main branch
 * Review and Merge the PR: Reviewed the changes for any potential issues. Once satisfied,i merged the pull request into the main branch, incorporating the new features or fixes into the production codebase.
 [githubmerge]: https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/github-merge.png
 
-**git checkout main**
-**git merge development**
-![gitmerge] (https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/git-merge.png)
-
+```
+git checkout main
+git merge development
+```
+![gitmerge](https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/github-merge.png)
 * Push the Merged Changes to GitHub: Ensure that your local main branch, now containing the updates, is pushed to the remote repository on GitHub.
 
-**git pull**
-**git push origin main**
+```
+git pull
+git push origin main
+```
 
-![syncing] (https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/synching-local-and-remote-main.png)
+![syncing](https://github.com/Samjean50/MarkPeak_Ecommerce/blob/main/images/ecom%20push.png)
 
 #### Step 4: Deploying Updates to the Production Server
-|* Pull the Latest Changes on the Server: SSH into your AWS EC2 instance where the production website is hosted. I navigated to the website's directory and pull the latest changes from the main branch using the command below.
+* Pull the Latest Changes on the Server: SSH into your AWS EC2 instance where the production website is hosted. I navigated to the website's directory and pull the latest changes from the main branch using the command below.
 
-**git pull origin main**
+```git pull origin main```
 * Restart the Web Server (if necessary): Depending on the nature of the updates, I restarted the web server to apply the changes.
 
-**sudo systemctl reload httpd**
+```sudo systemctl reload httpd```
 
 #### Step 5: Testing the New Changes
 
