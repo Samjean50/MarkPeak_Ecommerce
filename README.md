@@ -25,7 +25,7 @@
    - 4.2 [Version Control with Git](#42-version-control-with-Git)
    - 4.3 [Pull Requests and Merging to Main](#43-pull-requests-and-merging-to-main)
    - 4.4 [Deploy Updates to Production](#44-deploy-updates-to-production)
-   - 4.5 [Test Live Changes](#45-test-lives-changes)
+   - 4.5 [Test Live Changes](#45-test-live-changes)
 
 ### 1. Abstract
 This capstone project focuses on deploying a static e-commerce website using Git, Linux, and AWS. It demonstrates proficiency in version control, cloud computing, and web server configuration. The project follows a structured approach, including repository setup, website deployment, and continuous integration for updates. The final implementation ensures a scalable and accessible web presence hosted on AWS.
@@ -223,5 +223,3 @@ sudo systemctl reload httpd
 The updated e-commerce website was accessed via browser to confirm new features and fixes were functioning correctly.
 
 http://52.207.115.56/2130_waso_strategy/
-
-
